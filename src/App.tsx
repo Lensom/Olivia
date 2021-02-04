@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import history from './history';
 import './global/styles/index.scss';
 
 const App = () => {
@@ -10,6 +14,15 @@ const App = () => {
         Init
         <button className="button" onClick={() => setTheme((prev) => !prev)}>Change theme</button>
       </div>
+      <Router history={history}>
+        <Switch>
+          <MainLayout>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+            </Switch>
+          </MainLayout>
+        </Switch>
+      </Router>
     </div>
   );
 }
