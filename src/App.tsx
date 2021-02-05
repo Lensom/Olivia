@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
+import Profile from './pages/Profile';
 import history from './history';
 import './global/styles/index.scss';
 
 const App = () => {
   const [theme, setTheme] = useState<boolean>(false);
+  const switchTheme = () => setTheme(prev => !prev);
 
   return (
-    <div className="App">
-      <div className={'theme ' + (theme ? 'theme--dark' : 'theme--default')}>
-        Init
-        <button className="button" onClick={() => setTheme((prev) => !prev)}>Change theme</button>
-      </div>
+    <div className={'root theme ' + (theme ? 'theme--dark' : 'theme--default')}>
       <Router history={history}>
         <Switch>
-          <MainLayout>
+          <MainLayout onChangeTheme={switchTheme}>
             <Switch>
               <Route exact path="/" component={HomePage} />
+              <Route exact path="/profile" component={Profile} />
             </Switch>
           </MainLayout>
         </Switch>

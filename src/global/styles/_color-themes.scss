@@ -1,11 +1,14 @@
 $bg: "bg";
+$bg-side: "bg-side";
 
 $themes: (
   default: (
     bg: $bg--light,
+    bg-side: $bg--side,
   ),
   dark: (
     bg: $bg--dark,
+    bg-side: $bg--side,
   ),
 );
 

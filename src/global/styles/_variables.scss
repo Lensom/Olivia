@@ -1,2 +1,13 @@
 $bg--light: "#f9f9f9";
 $bg--dark: "#333";
+$font--default: "Roboto", sans-serif;
+$bg--side: linear-gradient(
+  180deg,
+  rgba(45, 47, 56, 1) 0%,
+  rgba(29, 30, 34, 1) 65%
+);
+$bg--main: radial-gradient(
+  circle,
+  rgba(50, 52, 62, 1) 0%,
+  rgba(23, 24, 29, 1) 65%
+);
