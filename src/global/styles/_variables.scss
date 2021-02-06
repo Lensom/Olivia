@@ -1,13 +1,24 @@
-$bg--light: "#f9f9f9";
-$bg--dark: "#333";
-$font--default: "Roboto", sans-serif;
-$bg--side: linear-gradient(
-  180deg,
-  rgba(45, 47, 56, 1) 0%,
-  rgba(29, 30, 34, 1) 65%
-);
-$bg--main: radial-gradient(
-  circle,
-  rgba(50, 52, 62, 1) 0%,
-  rgba(23, 24, 29, 1) 65%
-);
+$default--font: "Roboto", sans-serif;
+
+.light {
+  --theme-title-color: #111;
+  --theme-text-color: #333;
+  --theme-side-background: #f9f9f9;
+  --theme-page-background: #b9f9f9;
+}
+
+.dark {
+  --theme-title-color: #e6e8e8;
+  --theme-text-color: #8d8e91;
+  --theme-page-background: #111;
+  --theme-side-background: linear-gradient(
+    180deg,
+    rgba(45, 47, 56, 1) 0%,
+    rgba(29, 30, 34, 1) 65%
+  );
+  --theme-page-background: radial-gradient(
+    circle,
+    rgba(50, 52, 62, 1) 0%,
+    rgba(23, 24, 29, 1) 65%
+  );
+}

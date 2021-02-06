@@ -1,5 +1,4 @@
 @import "variables";
-@import "color-themes";
 @import "fonts";
 @import "reset";
 @import "typography";
@@ -7,7 +6,4 @@
 .button {
   background: transparent;
   border: none;
-  @include themed() {
-    background: t($bg);
-  }
 }

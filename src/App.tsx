@@ -11,7 +11,7 @@ const App = () => {
   const switchTheme = () => setTheme(prev => !prev);
 
   return (
-    <div className={'root theme ' + (theme ? 'theme--dark' : 'theme--default')}>
+    <div className={'root theme ' + (theme ? 'dark' : 'light')}>
       <Router history={history}>
         <Switch>
           <MainLayout onChangeTheme={switchTheme}>

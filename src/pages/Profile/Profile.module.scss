@@ -1,0 +1,11 @@
+@import "../../global/styles/variables";
+
+.title {
+  color: var(--theme-title-color);
+  font-size: 44px;
+}
+
+.text {
+  color: var(--theme-text-color);
+  font-size: 28px;
+}
