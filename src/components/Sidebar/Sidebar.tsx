@@ -1,29 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.scss';
-import {ReactComponent as Logotype} from '../../global/img/icons/logotype.svg';
+import { ReactComponent as Logotype } from '../../global/img/icons/logotype.svg';
+import { config } from './config';
+import { INavConfig } from './interface';
 
-interface IProps {
-  onChangeTheme: () => void;
-}
+export const Sidebar: React.FC = () => {
+  const [navItems] = useState<INavConfig>(config);
+  const { items } = navItems;
 
-export const Sidebar: React.FC<IProps> = ({ onChangeTheme }) => {
   return (
     <div className={styles.sidebar}>
-      <div className="logotype">
-        <Link to="/">
+      <div className={styles.logotype}>
+        <NavLink to="/">
           <Logotype />
-        </Link>
+        </NavLink>
       </div>
-      <div className="nav">
-        <ul className="list">
-          <li>
-            <Link to="/">Главная</Link>
-            <Link to="/profile">Профиль</Link>
+      <div className={styles.nav}>
+        <ul className={styles.list}>
+          {items.map(({ id, Image, url, text }) => 
+          <li key={id}>
+            <NavLink
+              to={url}
+              className={styles.link}
+              activeClassName={styles.active}
+            >
+              <div className={styles.image}>
+                <Image />
+              </div>
+              {text}
+            </NavLink>
           </li>
-        </ul>
-        <button className="button" onClick={onChangeTheme}>Change theme</button>
-      </div>
+          )}
+      </ul>
     </div>
+  </div>
   )
 }

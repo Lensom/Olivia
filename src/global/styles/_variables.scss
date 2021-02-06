@@ -10,15 +10,19 @@ $default--font: "Roboto", sans-serif;
 .dark {
   --theme-title-color: #e6e8e8;
   --theme-text-color: #8d8e91;
-  --theme-page-background: #111;
   --theme-side-background: linear-gradient(
     180deg,
     rgba(45, 47, 56, 1) 0%,
     rgba(29, 30, 34, 1) 65%
   );
-  --theme-page-background: radial-gradient(
-    circle,
+  --theme-page-background: linear-gradient(
+    180deg,
     rgba(50, 52, 62, 1) 0%,
     rgba(23, 24, 29, 1) 65%
   );
+  // --theme-page-background: radial-gradient(
+  //   circle,
+  //   rgba(50, 52, 62, 1) 0%,
+  //   rgba(23, 24, 29, 1) 65%
+  // );
 }

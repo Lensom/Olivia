@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Profile.module.scss';
+import styles from './ProfilePage.module.scss';
 
-export const Profile: React.FC = () => (
+export const ProfilePage: React.FC = () => (
   <div>
     <div className={styles.title}>Profile</div>
     <div className={styles.text}>Text</div>
