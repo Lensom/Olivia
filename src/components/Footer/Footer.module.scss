@@ -1,5 +1,28 @@
+@import "../../global/styles/variables";
+
 .footer {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: $white--color;
+  border-radius: 50%;
+}
+
+.icon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.animatable {
+  will-change: transform;
+  transform: translate(0, 0);
+  transition: transform 400ms ease-in;
+  fill: $white--color;
+  &.animated {
+    transform: translate(20px, -20px);
+  }
 }

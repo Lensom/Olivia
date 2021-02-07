@@ -1,10 +1,13 @@
+// common
 $default--font: "Roboto", sans-serif;
+$white--color: #e6e8e8;
+$hover--color: #7076E0;
 
 .light {
   --theme-title-color: #111;
   --theme-text-color: #333;
-  --theme-side-background: #f9f9f9;
-  --theme-page-background: #b9f9f9;
+  --theme-side-background: #f7f7f9;
+  --theme-page-background: #fcfcfc;
 }
 
 .dark {
