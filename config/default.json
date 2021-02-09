@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://magura:<qaz010166>@cluster0.vtuuv.mongodb.net/<olivia>?retryWrites=true&w=majority",
+  "jwtSecret": "magurawork olivia"
+}
