@@ -3,6 +3,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
+import AuthPage from './pages/AuthPage';
 import history from './history';
 import './global/styles/index.scss';
 
@@ -18,6 +19,7 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/profile" component={ProfilePage} />
+              <Route exact path="/auth" component={AuthPage} />
             </Switch>
           </MainLayout>
         </Switch>
